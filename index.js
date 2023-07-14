@@ -7,7 +7,7 @@ const sineWaveArray = new Float32Array(sampleRate);
 const hz = 500;
 
 // fill all 44100 elements of array with Math.sin() values
-for (i = 0; i < sineWaveArray.length; i++) {
+for (i = 0; i < sineWaveArray.length; i+=) {
   sineWaveArray[i] = Math.sin(i * Math.PI * 8 / hz);
 }
 
@@ -20,7 +20,7 @@ function playSound({ array, sampleRate }) {
   // We have to start with creating AudioContext
   const audioContext = new AudioContext({sampleRate});
   // create audio buffer of the same length as our array
-  const audioBuffer = audioContext.createBuffer(1, array.length, sampleRate);
+  const audioBuffer = audioContext.createBuffer(2, array.length, sampleRate);
   // this copies our sine wave to the audio buffer
   audioBuffer.copyToChannel(array, 0);
   // some JavaScript magic to actually play the sound
