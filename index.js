@@ -8,7 +8,8 @@ const hz = 500;
 
 // fill all 44100 elements of array with Math.sin() values
 for (i = 0; i < sineWaveArray.length; i+=) {
-  sineWaveArray[i] = Math.sin(i * Math.PI * 8 / hz);
+  //sineWaveArray[i] = Math.sin(i * Math.PI * 8 / hz);
+  sineWaveArray[i] = Math.sin(i * 2*Math.PI * hz / sampleRate);
 }
 
 /**
