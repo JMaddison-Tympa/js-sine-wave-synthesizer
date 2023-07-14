@@ -4,7 +4,7 @@ const sampleRate = 44100;
 // create a typed array of size 44100 float numbers
 const sineWaveArray = new Float32Array(sampleRate);
 
-const hz = 440;
+const hz = 500;
 
 // fill all 44100 elements of array with Math.sin() values
 for (i = 0; i < sineWaveArray.length; i++) {
