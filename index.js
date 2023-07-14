@@ -33,6 +33,6 @@ function playSound({ array, sampleRate }) {
   console.log(array);
 }
 
-function playSineWave440hz() {
+function playSineWave500hz() {
   playSound({ array: sineWaveArray, sampleRate });
 }
